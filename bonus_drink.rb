@@ -9,7 +9,7 @@ class BonusDrink
   def self.bonus_count(amount)
     bonus = amount/BONUS_COUNT
     nextAmount = bonus + amount%BONUS_COUNT
-    if nextAmount >= 3
+    if nextAmount >= BONUS_COUNT
       bonus + bonus_count(nextAmount)
     else
       bonus
